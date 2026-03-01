@@ -1094,7 +1094,29 @@ button {
     }
 
     .menu-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .product-image-container {
+        height: 150px;
+        padding: 1rem;
+    }
+
+    .product-info {
+        padding: 1rem;
+    }
+
+    .product-title {
+        font-size: 1rem;
+    }
+
+    .product-price {
+        font-size: 1rem;
+    }
+
+    .product-desc {
+        font-size: 0.75rem;
     }
 
     .floating-card {

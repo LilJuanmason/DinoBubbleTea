@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Descubre nuestras bebidas artesanales con toppings explosivos en un ambiente prehistóricamente divertido. ¡El té de burbujas que hace rugir tu corazón!">
+    <meta property="og:title" content="Dino Bubble Tea | La explosión de sabor más tierna">
+    <meta property="og:description" content="Té de burbujas artesanal con toppings explosivos.">
+    <meta property="og:type" content="website">
+    <title>Dino Bubble Tea</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Icons (Phosphor Icons for clean, consistent SVG icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body class="loading">
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <i class="ph-fill ph-paw-print logo-icon"></i>
+                <span class="logo-text">Dino <span class="logo-accent">Bubble Tea</span></span>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+                <i class="ph ph-list"></i>
+            </button>
+
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Inicio</a></li>
+                    <li><a href="#menu" class="nav-link">Menú</a></li>
+                    <li><a href="#locations" class="nav-link">Sucursales</a></li>
+                    <li><a href="#footer" class="nav-link">Contacto</a></li>
+                </ul>
+                <a href="#locations" class="btn btn-primary btn-sm">
+                    <i class="ph ph-storefront"></i>
+                    ¡Visítanos!
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content fade-up">
+                    <div class="badge fade-up" style="animation-delay: 0.1s;">
+                        <span class="badge-dot"></span>
+                        Ingredientes 100% Naturales
+                    </div>
+
+                    <h1 class="hero-title fade-up" style="animation-delay: 0.2s;">
+                        La explosión de
+                        <span class="highlight-wrapper">
+                            <span class="highlight-text">sabor</span>
+                            <svg class="squiggly-underline" viewBox="0 0 150 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2 13C16.5 2.5 31 13 45.5 13C60 13 74.5 2.5 89 2.5C103.5 2.5 118 13 132.5 13C147 13 148 2.5 148 2.5"
+                                    stroke="#B8D8BA" stroke-width="4" stroke-linecap="round" />
+                            </svg>
+                        </span>
+                        <br>más tierna
+                    </h1>
+
+                    <p class="hero-desc fade-up" style="animation-delay: 0.3s;">
+                        Descubre nuestras bebidas artesanales con toppings explosivos en un ambiente prehistóricamente
+                        divertido. ¡El té de burbujas que hace rugir tu corazón!
+                    </p>
+
+                    <div class="hero-buttons fade-up" style="animation-delay: 0.4s;">
+                        <a href="#menu" class="btn btn-primary btn-lg">
+                            Ver Menú Completo
+                        </a>
+                        <a href="#locations" class="btn btn-outline btn-lg">
+                            Encontrar Sucursal
+                        </a>
+                    </div>
+
+                    <!-- Social Proof / Stats -->
+                    <div class="hero-stats fade-up" style="animation-delay: 0.5s;">
+                        <div class="stat-avatars">
+                            <img src="https://i.pravatar.cc/100?img=1" alt="Cliente feliz" class="avatar">
+                            <img src="https://i.pravatar.cc/100?img=5" alt="Cliente feliz" class="avatar">
+                            <img src="https://i.pravatar.cc/100?img=8" alt="Cliente feliz" class="avatar">
+                            <div class="avatar-more">+2k</div>
+                        </div>
+                        <div class="stat-text">
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i>
+                            </div>
+                            <span>Dino-fans felices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper fade-in" style="animation-delay: 0.3s;">
+                    <div class="hero-image-bg"></div>
+                    <!-- Bubble Tea Image (Generated Banner) -->
+                    <img src="Imagenes_Menú/hero_banner.png" alt="Delicioso Bubble Tea Especial"
+                        class="hero-image floating"
+                        style="border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); object-fit: cover;">
+
+                    <!-- Floating UI elements -->
+                    <div class="floating-card tap-card">
+                        <i class="ph-fill ph-drop"></i> Tapioca Extra
+                    </div>
+                    <div class="floating-card flavor-card">
+                        <i class="ph-fill ph-leaf"></i> Matcha 100% puro
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promo Banner (Dynamic Slider) -->
+        <section id="promo" class="promo-banner">
+            <div class="promo-track" id="promo-track">
+
+                <!-- Slide 1 -->
+                <div class="promo-slide" style="background-color: var(--color-secondary);">
+                    <div class="container promo-content scroll-reveal">
+                        <div class="promo-text">
+                            <span class="promo-tag">¡Promoción Jurásica!</span>
+                            <h2>Compra 2 Dino-Teas grandes y llévate el tercero totalmente <strong>GRATIS</strong>.</h2>
+                            <p>Solo por tiempo limitado en sucursales seleccionadas.</p>
+                        </div>
+                        <a href="#locations" class="btn btn-dark btn-lg">Canjear ahora</a>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="promo-slide" style="background-color: var(--color-primary-light);">
+                    <div class="container promo-content">
+                        <div class="promo-text">
+                            <span class="promo-tag" style="background-color: var(--color-primary); color: white;">De
+                                Temporada</span>
+                            <h2>Refresca tu día con nuestra <strong>Piña Colada Boba</strong>.</h2>
+                            <p>El sabor tropical perfecto para combatir el calor. ¡Pruébalo antes de que se extinga!</p>
+                        </div>
+                        <a href="#menu" class="btn btn-primary btn-lg"
+                            onclick="document.querySelector('.tab-btn[data-tab=\'base-leche\']').click()">Ver menú</a>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="promo-slide" style="background-color: #A3C9E2;">
+                    <div class="container promo-content">
+                        <div class="promo-text">
+                            <span class="promo-tag" style="background-color: var(--color-text); color: white;">Dino
+                                Rewards</span>
+                            <h2>Acumula <strong>Dino-Puntos</strong> en cada visita.</h2>
+                            <p>Regístrate en tu sucursal más cercana y obtén toppings gratis, descuentos y grandes
+                                sorpresas en tu cumpleaños.</p>
+                        </div>
+                        <a href="#locations" class="btn btn-dark btn-lg">Visítanos hoy</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Decorative leaves -->
+            <i class="ph-fill ph-plant leaf-dec leaf-1"></i>
+            <i class="ph-fill ph-plant leaf-dec leaf-2"></i>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title">Explora el Menú</h2>
+                    <p class="section-subtitle">Nuestras bebidas más populares, preparadas al momento con ingredientes
+                        frescos.</p>
+                </div>
+
+                <!-- Tabs -->
+                <div class="menu-tabs scroll-reveal"
+                    style="transition-delay: 0.1s; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                    <button class="tab-btn active" data-tab="base-leche">Base Leche</button>
+                    <button class="tab-btn" data-tab="base-te">Base Té</button>
+                    <button class="tab-btn" data-tab="base-yogurt">Base Yogurt</button>
+                    <button class="tab-btn" data-tab="base-energetico">Base Energético</button>
+                    <button class="tab-btn" data-tab="especiales">Especiales</button>
+                </div>
+
+                <!-- Menu Grid -->
+                <!-- Note: The product category filtering will be handled by script.js. 
+                     All items are initially rendered but hidden/shown based on the 'data-category' attribute matching the active tab -->
+                <div class="menu-grid" id="menu-grid">
+
+                    <!-- ==============================
+                         BASE LECHE
+                         ============================== -->
+                    <article class="product-card scroll-reveal" data-category="base-leche">
+                        <div class="product-image-container pink-bg">
+                            <img src="Imagenes_Menú/Base_leche/Frutos_Rojos.png" alt="Base Leche Frutos Rojos"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558855567-1a3afbb81c8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Frutos Rojos</h3>
+                                <span class="product-price">$109.00</span>
+                            </div>
+                            <p class="product-desc">Combinación intensa y dulce con toque ácido. Frutos rojos, leche y
+                                hielo frappe. 16 Oz.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-leche">
+                        <div class="product-image-container green-bg">
+                            <img src="Imagenes_Menú/Base_leche/Matcha.png" alt="Base Leche Matcha" class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Matcha</h3>
+                                <span class="product-price">$109.00</span>
+                            </div>
+                            <p class="product-desc">Clásico japonés suave y elegante. Hecho con matcha orgánico. 16 Oz.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-leche">
+                        <div class="product-image-container yellow-bg">
+                            <img src="Imagenes_Menú/Base_leche/Café_vainilla.png" alt="Base Leche Café Vainilla"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558021159-001090666ac1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Café Vainilla</h3>
+                                <span class="product-price">$109.00</span>
+                            </div>
+                            <p class="product-desc">Sabor clásico del café con un giro dulce y aroma de vainilla. 16 Oz.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-leche">
+                        <div class="product-image-container teal-bg">
+                            <img src="Imagenes_Menú/Base_leche/chocolate.png" alt="Base Leche Chocolate"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558855567-1a3afbb81c8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                            <div class="popular-badge">Top Ventas</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Chocolate Frappe</h3>
+                                <span class="product-price">$109.00</span>
+                            </div>
+                            <p class="product-desc">La bebida favorita en versión frappe. Mezcla intensa y dulce que
+                                nunca falla. 16 Oz.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-leche">
+                        <div class="product-image-container pink-bg">
+                            <img src="Imagenes_Menú/Base_leche/passion_fruit.png" alt="Base Leche Passion Fruit"
+                                class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Passion Fruit</h3>
+                                <span class="product-price">$97.00</span>
+                            </div>
+                            <p class="product-desc">Jugo de maracuyá con tapioca, leche y topping a elegir. 16 oz.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-leche">
+                        <div class="product-image-container teal-bg">
+                            <img src="Imagenes_Menú/Base_leche/chai.png" alt="Base Leche Chai" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Chai</h3>
+                                <span class="product-price">$97.00</span>
+                            </div>
+                            <p class="product-desc">Jugo de chai con tapioca, leche y topping a elegir. 16 oz.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-leche">
+                        <div class="product-image-container yellow-bg">
+                            <img src="Imagenes_Menú/Base_leche/pina_colada.png" alt="Base Leche Piña Colada"
+                                class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Piña Colada</h3>
+                                <span class="product-price">$97.00</span>
+                            </div>
+                            <p class="product-desc">Jugo de piña colada con tapioca, leche y topping a elegir. 16 oz.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-leche">
+                        <div class="product-image-container pink-bg">
+                            <img src="Imagenes_Menú/Base_leche/choco_blanco_frutos.png"
+                                alt="Base Leche Choco Blanco y Frutos Rojos" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Choco Blanco Frutos</h3>
+                                <span class="product-price">$97.00</span>
+                            </div>
+                            <p class="product-desc">Jugo de chocolate blanco, frutos rojos con tapioca, leche y topping.
+                                16 oz.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-leche">
+                        <div class="product-image-container teal-bg">
+                            <img src="Imagenes_Menú/Especiales/Blue_berry.png" alt="Base Especial Leche Blueberry"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558855567-1a3afbb81c8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Especial Blueberry</h3>
+                                <span class="product-price">$119.00</span>
+                            </div>
+                            <p class="product-desc">Jugo de blueberry vainilla con tapioca, leche y topping a elegir. 16
+                                oz.</p>
+                        </div>
+                    </article>
+
+                    <!-- ==============================
+                         BASE TÉ
+                         ============================== -->
+                    <article class="product-card scroll-reveal" data-category="base-te" style="display: none;">
+                        <div class="product-image-container yellow-bg">
+                            <img src="Imagenes_Menú/Base_Té/Mango.png" alt="Base Té Mango" class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558021159-001090666ac1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Té Mango</h3>
+                                <span class="product-price">$99.00</span>
+                            </div>
+                            <p class="product-desc">Clásico tropical. Bebida con base de té y mango, afrutada y dulce
+                                con final fresco. 16 Oz.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-te" style="display: none;">
+                        <div class="product-image-container yellow-bg">
+                            <img src="Imagenes_Menú/Base_Té/Maracuyá.png" alt="Base Té Maracuyá" class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558021159-001090666ac1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Té Passion Fruit</h3>
+                                <span class="product-price">$99.00</span>
+                            </div>
+                            <p class="product-desc">Té con passion fruit (maracuyá), tapioca y topping a elegir. 16 oz.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-te" style="display: none;">
+                        <div class="product-image-container pink-bg">
+                            <img src="Imagenes_Menú/Base_Té/Frutos_Rojos.png" alt="Base Té Frutos Rojos"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1590432857416-2fd8e9aa5b64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Té Frutos Rojos</h3>
+                                <span class="product-price">$99.00</span>
+                            </div>
+                            <p class="product-desc">Sabor frutal y chispeante. Combina dulzor con ligera acidez. 16 Oz.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-te" style="display: none;">
+                        <div class="product-image-container pink-bg">
+                            <img src="Imagenes_Menú/Base_Té/Fresa.png" alt="Base Té Fresa" class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1590432857416-2fd8e9aa5b64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Té Fresa</h3>
+                                <span class="product-price">$99.00</span>
+                            </div>
+                            <p class="product-desc">Clásico sabor a fresa con giro fresco. Hecha con té y jarabe
+                                natural. 16 Oz.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-te" style="display: none;">
+                        <div class="product-image-container green-bg">
+                            <img src="Imagenes_Menú/Base_Té/Kiwi.png" alt="Base Té Kiwi" class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Té Kiwi</h3>
+                                <span class="product-price">$99.00</span>
+                            </div>
+                            <p class="product-desc">Refrescante y ácido. Nuestro frappé de té con kiwi chispeante y
+                                único. 16 Oz.</p>
+                        </div>
+                    </article>
+
+                    <!-- ==============================
+                         BASE YOGURT
+                         ============================== -->
+                    <article class="product-card scroll-reveal" data-category="base-yogurt" style="display: none;">
+                        <div class="product-image-container pink-bg">
+                            <img src="Imagenes_Menú/Base_Yogurth/yogur_frutos.png" alt="Base Yogurt Frutos Rojos"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1590432857416-2fd8e9aa5b64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Yogurt Frutos Rojos</h3>
+                                <span class="product-price">$109.00</span>
+                            </div>
+                            <p class="product-desc">Ácida, dulce y deliciosa. Yogurt cremoso con frutos rojos. 16 Oz.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-yogurt" style="display: none;">
+                        <div class="product-image-container yellow-bg">
+                            <img src="Imagenes_Menú/Base_Yogurth/yogur_maracuya.png" alt="Base Yogurt Maracuyá"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558021159-001090666ac1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Yogurt Maracuyá</h3>
+                                <span class="product-price">$97.00</span>
+                            </div>
+                            <p class="product-desc">Yogurt de passion fruit con tapioca y topping a elegir. 16 oz.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-yogurt" style="display: none;">
+                        <div class="product-image-container pink-bg">
+                            <img src="Imagenes_Menú/Base_Yogurth/yogu_fresa.png" alt="Base Yogurt Fresa"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1590432857416-2fd8e9aa5b64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Yogurt Fresa</h3>
+                                <span class="product-price">$109.00</span>
+                            </div>
+                            <p class="product-desc">Yogurt de fresa con tapioca y topping a elegir. 16 oz.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-yogurt" style="display: none;">
+                        <div class="product-image-container yellow-bg">
+                            <img src="Imagenes_Menú/Base_Yogurth/Yogur_mangp.png" alt="Base Yogurt Mango"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558021159-001090666ac1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Yogurt Mango</h3>
+                                <span class="product-price">$109.00</span>
+                            </div>
+                            <p class="product-desc">Cremosa y tropical. Frescor del yogurt con el dulzor del mango. 16
+                                Oz.</p>
+                        </div>
+                    </article>
+
+                    <!-- ==============================
+                         BASE ENERGÉTICO
+                         ============================== -->
+                    <article class="product-card scroll-reveal" data-category="base-energetico" style="display: none;">
+                        <div class="product-image-container yellow-bg">
+                            <img src="Imagenes_Menú/Base_energético/Energétic_maracuyá.png"
+                                alt="Base Energético Maracuyá" class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558021159-001090666ac1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Energético Maracuyá</h3>
+                                <span class="product-price">$109.00</span>
+                            </div>
+                            <p class="product-desc">Boost de energía y sabor. Energético y maracuyá ácido y
+                                electrizante. 16 Oz.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-energetico" style="display: none;">
+                        <div class="product-image-container pink-bg">
+                            <img src="Imagenes_Menú/Base_energético/Energético_frutos.png"
+                                alt="Base Energético Frutos Rojos" class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1590432857416-2fd8e9aa5b64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Energético Frutos</h3>
+                                <span class="product-price">$109.00</span>
+                            </div>
+                            <p class="product-desc">Dulce y energética. Para un día activo con sabor a golosinas. 16 Oz.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-energetico" style="display: none;">
+                        <div class="product-image-container green-bg">
+                            <img src="Imagenes_Menú/Base_energético/Energético_Kiwi.png" alt="Base Energético Kiwi"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Energético Kiwi</h3>
+                                <span class="product-price">$109.00</span>
+                            </div>
+                            <p class="product-desc">Refrescante y ácido. Frappe de kiwi con base energética
+                                revitalizante. 16 Oz.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="base-energetico" style="display: none;">
+                        <div class="product-image-container yellow-bg">
+                            <img src="Imagenes_Menú/Base_energético/Ennergético_Mango.png" alt="Base Energético Mango"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558021159-001090666ac1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Energético Mango</h3>
+                                <span class="product-price">$109.00</span>
+                            </div>
+                            <p class="product-desc">Bebida que despierta. Energético y mango para un boost tropical. 16
+                                Oz.</p>
+                        </div>
+                    </article>
+
+                    <!-- ==============================
+                         ESPECIALES
+                         ============================== -->
+                    <article class="product-card scroll-reveal" data-category="especiales" style="display: none;">
+                        <div class="product-image-container teal-bg">
+                            <img src="Imagenes_Menú/Especiales/Taro_coco.png" alt="Mixed Taro Coco"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558855567-1a3afbb81c8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Mixed Taro Coco</h3>
+                                <span class="product-price">$129.00</span>
+                            </div>
+                            <p class="product-desc">Suavidad aterciopelada del taro con nuestra receta especial coco.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="especiales" style="display: none;">
+                        <div class="product-image-container green-bg">
+                            <img src="Imagenes_Menú/Especiales/Matcha_coco.png" alt="Mixed Matcha Coco"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Mixed Matcha Coco</h3>
+                                <span class="product-price">$129.00</span>
+                            </div>
+                            <p class="product-desc">Equilibrio perfecto. Matcha japonés intenso con crema de coco
+                                tropical.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="especiales" style="display: none;">
+                        <div class="product-image-container pink-bg">
+                            <img src="Imagenes_Menú/Especiales/Nutella_fresa.png" alt="Mixed Nutella Fresa"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1590432857416-2fd8e9aa5b64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Nutella Fresa</h3>
+                                <span class="product-price">$129.00</span>
+                            </div>
+                            <p class="product-desc">Intensidad del chocolate avellana (Nutella) y frescura natural de la
+                                fresa.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="especiales" style="display: none;">
+                        <div class="product-image-container pink-bg">
+                            <img src="Imagenes_Menú/Especiales/Chamoyada_fresa.png" alt="Chamoyada Fresa"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1590432857416-2fd8e9aa5b64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Chamoyada Fresa</h3>
+                                <span class="product-price">$109.00</span>
+                            </div>
+                            <p class="product-desc">Versión intensa y deliciosa de la clásica fresa con chile. 16 oz.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="especiales" style="display: none;">
+                        <div class="product-image-container yellow-bg">
+                            <img src="Imagenes_Menú/Especiales/Chamoyada.png" alt="Chamoyada Mango"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558021159-001090666ac1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Chamoyada Mango</h3>
+                                <span class="product-price">$109.00</span>
+                            </div>
+                            <p class="product-desc">¡Clásico mexicano! Mango frappe con chamoy, chilito en polvo dulce,
+                                ácido y picante.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="especiales" style="display: none;">
+                        <div class="product-image-container teal-bg">
+                            <img src="Imagenes_Menú/Especiales/Nutella.png" alt="Especial Nutella" class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558855567-1a3afbb81c8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Frappe Nutella</h3>
+                                <span class="product-price">$119.00</span>
+                            </div>
+                            <p class="product-desc">¡Un sueño cremoso hecho frappé! Pura indulgencia con Nutella
+                                original.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="especiales" style="display: none;">
+                        <div class="product-image-container teal-bg">
+                            <img src="Imagenes_Menú/Especiales/Taro.png" alt="Especial Taro" class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558855567-1a3afbb81c8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Especial Taro</h3>
+                                <span class="product-price">$119.00</span>
+                            </div>
+                            <p class="product-desc">Sabor exótico, textura cremosa y color espectacular.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="especiales" style="display: none;">
+                        <div class="product-image-container green-bg">
+                            <img src="Imagenes_Menú/Especiales/Manzana_Verde.png" alt="Especial Manzana Verde"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Manzana Verde</h3>
+                                <span class="product-price">$119.00</span>
+                            </div>
+                            <p class="product-desc">Fresca, ácida y con ese sabor que despierta el paladar.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="especiales" style="display: none;">
+                        <div class="product-image-container pink-bg">
+                            <img src="Imagenes_Menú/Especiales/Oreo.png" alt="Especial Oreo" class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558855567-1a3afbb81c8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Frappe Oreo</h3>
+                                <span class="product-price">$119.00</span>
+                            </div>
+                            <p class="product-desc">Una bebida deliciosamente cremosa hecha con galletas Oreo reales.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="especiales" style="display: none;">
+                        <div class="product-image-container teal-bg">
+                            <img src="Imagenes_Menú/Especiales/Blue_berry.png" alt="Especial Blueberry"
+                                class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558855567-1a3afbb81c8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Especial Blueberry</h3>
+                                <span class="product-price">$119.00</span>
+                            </div>
+                            <p class="product-desc">Delicioso, dulce e intenso, así es nuestro blueberry especial. 16
+                                oz.</p>
+                        </div>
+                    </article>
+
+                    <article class="product-card scroll-reveal" data-category="especiales" style="display: none;">
+                        <div class="product-image-container yellow-bg">
+                            <img src="Imagenes_Menú/Especiales/Mazapán.png" alt="Especial Mazapán" class="product-image"
+                                onerror="this.src='https://images.unsplash.com/photo-1558021159-001090666ac1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-header">
+                                <h3 class="product-title">Mazapán Leche</h3>
+                                <span class="product-price">$119.00</span>
+                            </div>
+                            <p class="product-desc">Antojo único elaborada con mazapán original mexicano. 16 Oz.</p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+            </div>
+        </section>
+
+        <!-- Locations Section -->
+        <section id="locations" class="locations-section">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="sub-badge">¿DÓNDE ESTAMOS?</span>
+                    <h2 class="section-title">Nuestras Cuevas</h2>
+                </div>
+
+                <div class="locations-grid">
+                    <!-- Location 1: Metepec -->
+                    <div class="location-card scroll-reveal" style="transition-delay: 0.1s;">
+                        <div class="map-placeholder">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15065.918919656857!2d-99.61910940523277!3d19.251031799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8b00330b70b9%3A0x7a9cef55c188ec88!2sDino%20Bubble%20Tea!5e0!3m2!1ses-419!2smx!4v1716380625901!5m2!1ses-419!2smx"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="map-overlay">
+                                <a href="https://www.google.com.mx/maps/place/Dino+Bubble+Tea/@19.2555723,-99.6292644,13.75z/data=!4m10!1m2!2m1!1sdino+bubble+tea!3m6!1s0x85cd8b00330b70b9:0x7a9cef55c188ec88!8m2!3d19.2510318!4d-99.6098394!15sCg9kaW5vIGJ1YmJsZSB0ZWFaESIPZGlubyBidWJibGUgdGVhkgELY29mZmVlX3Nob3DgAQA!16s%2Fg%2F11yhfc10z_?entry=ttu"
+                                    target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm btn-icon"><i
+                                        class="ph-fill ph-navigation-arrow"></i> Cómo llegar</a>
+                            </div>
+                        </div>
+                        <div class="location-info">
+                            <div class="loc-head">
+                                <h3>Dino Metepec</h3>
+                                <div class="rating">
+                                    <i class="ph-fill ph-star"></i> 4.9 <span
+                                        style="color: var(--color-text-light); font-weight: normal; font-size: 0.8em; margin-left: 2px;">(140)</span>
+                                </div>
+                            </div>
+                            <p class="address"><i class="ph ph-map-pin"></i> Calle Ignacio Zaragoza 177.</p>
+                            <p class="hours"><i class="ph ph-clock"></i> Hoy: 11:00 AM - 9:00 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Location 2: Capultitlán -->
+                    <div class="location-card scroll-reveal" style="transition-delay: 0.2s;">
+                        <div class="map-placeholder">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15065.231924164319!2d-99.6738243!3d19.254514299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd89b74e390159%3A0x696f23345bec69f0!2sDino%20Bubble%20Tea!5e0!3m2!1ses-419!2smx!4v1716380665790!5m2!1ses-419!2smx"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="map-overlay">
+                                <a href="https://www.google.com.mx/maps/place/Dino+Bubble+Tea/@19.2558542,-99.686828,13.75z/data=!4m10!1m2!2m1!1sdino+bubble+tea!3m6!1s0x85cd89b74e390159:0x696f23345bec69f0!8m2!3d19.2545143!4d-99.6633058!15sCg9kaW5vIGJ1YmJsZSB0ZWFaESIPZGlubyBidWJibGUgdGVhkgEJY2FmZXRlcmlh4AEA!16s%2Fg%2F11rydfzzcc?entry=ttu"
+                                    target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm btn-icon"><i
+                                        class="ph-fill ph-navigation-arrow"></i> Cómo llegar</a>
+                            </div>
+                        </div>
+                        <div class="location-info">
+                            <div class="loc-head">
+                                <h3>Dino Capultitlán</h3>
+                                <div class="rating">
+                                    <i class="ph-fill ph-star"></i> 4.9 <span
+                                        style="color: var(--color-text-light); font-weight: normal; font-size: 0.8em; margin-left: 2px;">(181)</span>
+                                </div>
+                            </div>
+                            <p class="address"><i class="ph ph-map-pin"></i> P.º Cristóbal Colón 346.</p>
+                            <p class="hours"><i class="ph ph-clock"></i> Hoy: 11:00 AM - 9:00 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Location 3: Centro -->
+                    <div class="location-card scroll-reveal" style="transition-delay: 0.3s;">
+                        <div class="map-placeholder">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15064.041697207604!2d-99.6631215!3d19.283320799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8987b201d3bb%3A0xf7fb452ba3658e2d!2sDino%20Bubble%20Tea!5e0!3m2!1ses-419!2smx!4v1716380696222!5m2!1ses-419!2smx"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="map-overlay">
+                                <a href="https://www.google.com.mx/maps/place/Dino+Bubble+Tea/@19.2606221,-99.6823783,14z/data=!4m10!1m2!2m1!1sdino+bubble+tea!3m6!1s0x85cd8987b201d3bb:0xf7fb452ba3658e2d!8m2!3d19.2833208!4d-99.6526022!15sCg9kaW5vIGJ1YmJsZSB0ZWFaESIPZGlubyBidWJibGUgdGVhkgEMZXNwcmVzc29fYmFy4AEA!16s%2Fg%2F11y19tlk_3?entry=ttu"
+                                    target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm btn-icon"><i
+                                        class="ph-fill ph-navigation-arrow"></i> Cómo llegar</a>
+                            </div>
+                        </div>
+                        <div class="location-info">
+                            <div class="loc-head">
+                                <h3>Dino Centro</h3>
+                                <div class="rating">
+                                    <i class="ph-fill ph-star"></i> 5.0 <span
+                                        style="color: var(--color-text-light); font-weight: normal; font-size: 0.8em; margin-left: 2px;">(67)</span>
+                                </div>
+                            </div>
+                            <p class="address"><i class="ph ph-map-pin"></i> Ignacio López Rayón 511.</p>
+                            <p class="hours"><i class="ph ph-clock"></i> Hoy: 12:00 PM - 10:00 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Location 4: Ceboruco -->
+                    <div class="location-card scroll-reveal" style="transition-delay: 0.1s;">
+                        <div class="map-placeholder">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15064.673238914614!2d-99.6672379!3d19.260879899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd89004eaf3905%3A0x60dbdf63152cb872!2sDino%20Bubble%20Tea!5e0!3m2!1ses-419!2smx!4v1716380721245!5m2!1ses-419!2smx"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="map-overlay">
+                                <a href="https://www.google.com.mx/maps/place/Dino+Bubble+Tea/@19.2621666,-99.6674298,15.5z/data=!4m10!1m2!2m1!1sdino+bubble+tea!3m6!1s0x85cd89004eaf3905:0x60dbdf63152cb872!8m2!3d19.2608799!4d-99.6567187!15sCg9kaW5vIGJ1YmJsZSB0ZWFaESIPZGlubyBidWJibGUgdGVhkgELY29mZmVlX3Nob3DgAQA!16s%2Fg%2F11w_zmk1pj?entry=ttu"
+                                    target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm btn-icon"><i
+                                        class="ph-fill ph-navigation-arrow"></i> Cómo llegar</a>
+                            </div>
+                        </div>
+                        <div class="location-info">
+                            <div class="loc-head">
+                                <h3>Dino Ceboruco</h3>
+                                <div class="rating">
+                                    <i class="ph-fill ph-star"></i> 4.9 <span
+                                        style="color: var(--color-text-light); font-weight: normal; font-size: 0.8em; margin-left: 2px;">(143)</span>
+                                </div>
+                            </div>
+                            <p class="address"><i class="ph ph-map-pin"></i> Gral. Abelardo Rodríguez 452.</p>
+                            <p class="hours"><i class="ph ph-clock"></i> Hoy: 11:00 AM - 9:00 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Location 5: Seminario -->
+                    <div class="location-card scroll-reveal" style="transition-delay: 0.2s;">
+                        <div class="map-placeholder">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15064.212727653592!2d-99.6814115!3d19.270359199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd89001cb2504f%3A0x91f471637924416b!2sDino%20Bubble%20Tea!5e0!3m2!1ses-419!2smx!4v1716380749841!5m2!1ses-419!2smx"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="map-overlay">
+                                <a href="https://www.google.com.mx/maps/place/Dino+Bubble+Tea/@19.2833208,-99.690711,14z/data=!4m10!1m2!2m1!1sdino+bubble+tea!3m6!1s0x85cd89001cb2504f:0x91f471637924416b!8m2!3d19.2703592!4d-99.6708925!15sCg9kaW5vIGJ1YmJsZSB0ZWFaESIPZGlubyBidWJibGUgdGVhkgELY29mZmVlX3Nob3DgAQA!16s%2Fg%2F11wmw166wd?entry=ttu"
+                                    target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm btn-icon"><i
+                                        class="ph-fill ph-navigation-arrow"></i> Cómo llegar</a>
+                            </div>
+                        </div>
+                        <div class="location-info">
+                            <div class="loc-head">
+                                <h3>Dino Seminario</h3>
+                                <div class="rating">
+                                    <i class="ph-fill ph-star"></i> 5.0 <span
+                                        style="color: var(--color-text-light); font-weight: normal; font-size: 0.8em; margin-left: 2px;">(147)</span>
+                                </div>
+                            </div>
+                            <p class="address"><i class="ph ph-map-pin"></i> C. Laguna del Volcán 322.</p>
+                            <p class="hours"><i class="ph ph-clock"></i> Hoy: 11:00 AM - 9:00 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Location 6: Zinacantepec -->
+                    <div class="location-card scroll-reveal" style="transition-delay: 0.3s;">
+                        <div class="map-placeholder">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15063.136701977931!2d-99.747071!3d19.296317499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd870028e1168b%3A0xf11bd3a2a5ce0316!2sDino%20Bubble%20Tea!5e0!3m2!1ses-419!2smx!4v1716380775581!5m2!1ses-419!2smx"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="map-overlay">
+                                <a href="https://www.google.com.mx/maps/place/Dino+Bubble+Tea/@19.2963175,-99.774661,14z/data=!4m10!1m2!2m1!1sdino+bubble+tea!3m6!1s0x85cd870028e1168b:0xf11bd3a2a5ce0316!8m2!3d19.2963175!4d-99.7365522!15sCg9kaW5vIGJ1YmJsZSB0ZWFaESIPZGlubyBidWJibGUgdGVhkgELY29mZmVlX3Nob3DgAQA!16s%2Fg%2F11xt2d4_qk?entry=ttu"
+                                    target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm btn-icon"><i
+                                        class="ph-fill ph-navigation-arrow"></i> Cómo llegar</a>
+                            </div>
+                        </div>
+                        <div class="location-info">
+                            <div class="loc-head">
+                                <h3>Dino Zinacantepec</h3>
+                                <div class="rating">
+                                    <i class="ph-fill ph-star"></i> 4.9 <span
+                                        style="color: var(--color-text-light); font-weight: normal; font-size: 0.8em; margin-left: 2px;">(74)</span>
+                                </div>
+                            </div>
+                            <p class="address"><i class="ph ph-map-pin"></i> México 15 212.</p>
+                            <p class="hours"><i class="ph ph-clock"></i> Hoy: 11:00 AM - 9:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo">
+                    <i class="ph-fill ph-paw-print logo-icon"></i>
+                    <span class="logo-text">Dino <span class="logo-accent">Bubble Tea</span></span>
+                </a>
+                <p class="footer-desc">
+                    Tu dosis diaria de felicidad prehistórica. Ingredientes naturales, sabores explosivos y mucho amor
+                    en cada vaso.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram" class="social-icon"><i class="ph-fill ph-instagram-logo"></i></a>
+                    <a href="#" aria-label="Facebook" class="social-icon"><i class="ph-fill ph-facebook-logo"></i></a>
+                    <a href="#" aria-label="TikTok" class="social-icon"><i class="ph-fill ph-tiktok-logo"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Explorar</h4>
+                <ul>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#menu">Nuestro Menú</a></li>
+                    <li><a href="#promo">Promociones</a></li>
+                    <li><a href="#locations">Encontrar Sucursal</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Compañía</h4>
+                <ul>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                    <li><a href="#">Franquicias</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-hours">
+                <h4>Horario</h4>
+                <ul>
+                    <li><strong>Lun - Vie:</strong> 11:00 AM - 9:00 PM</li>
+                    <li><strong>Sáb - Dom:</strong> 12:00 PM - 10:00 PM</li>
+                    <li class="holiday-note">* Los horarios de días festivos pueden variar.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Dino Bubble Tea. Todos los derechos reservados.</p>
+                <div class="legal-links">
+                    <a href="#">Aviso de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -30,8 +30,9 @@
     <header class="header" id="header">
         <div class="container header-content">
             <a href="#" class="logo">
-                <i class="ph-fill ph-paw-print logo-icon"></i>
-                <span class="logo-text">Dino <span class="logo-accent">Bubble Tea</span></span>
+                <img src="Imagenes_Menú/Icono.png" alt="Dino Bubble Tea" class="img-logo">
+                <span class="logo-text"><span class="logo-dino">Dino</span> <span class="logo-accent">Bubble
+                        Tea</span></span>
             </a>
 
             <!-- Mobile Menu Toggle -->
@@ -54,7 +55,24 @@
         </div>
     </header>
 
-    <main>
+    <main style="position: relative;">
+        <!-- Global Paint Splatters -->
+        <div class="paint-splatter splatter-1"></div>
+        <div class="paint-splatter splatter-2"></div>
+        <div class="paint-splatter splatter-3"></div>
+        <div class="paint-splatter splatter-4"></div>
+        <div class="paint-splatter splatter-5"></div>
+        <div class="paint-splatter splatter-1"
+            style="top: 35%; left: 85%; width: 10vw; height: 10vw; transform: rotate(-55deg);"></div>
+        <div class="paint-splatter splatter-3"
+            style="top: 15%; left: -2%; width: 8vw; height: 8vw; transform: rotate(12deg);"></div>
+        <div class="paint-splatter splatter-2"
+            style="top: 72%; left: 5%; width: 9vw; height: 9vw; transform: rotate(45deg);"></div>
+        <div class="paint-splatter splatter-5"
+            style="top: 50%; right: -5%; width: 14vw; height: 14vw; transform: rotate(-95deg);"></div>
+        <div class="paint-splatter splatter-4"
+            style="top: 88%; right: -3%; width: 11vw; height: 11vw; transform: rotate(111deg);"></div>
+
         <!-- Hero Section -->
         <section id="hero" class="hero">
             <div class="container hero-grid">
@@ -75,12 +93,12 @@
                                     stroke="#B8D8BA" stroke-width="4" stroke-linecap="round" />
                             </svg>
                         </span>
-                        <br>más tierna
+                        <br>más voráz
                     </h1>
 
                     <p class="hero-desc fade-up" style="animation-delay: 0.3s;">
                         Descubre nuestras bebidas artesanales con toppings explosivos en un ambiente prehistóricamente
-                        divertido. ¡El té de burbujas que hace rugir tu corazón!
+                        divertido. ¡Las dinobebidas que hacen rugir tu corazón!
                     </p>
 
                     <div class="hero-buttons fade-up" style="animation-delay: 0.4s;">
@@ -133,55 +151,117 @@
         <section id="promo" class="promo-banner">
             <div class="promo-track" id="promo-track">
 
-                <!-- Slide 1 -->
-                <div class="promo-slide" style="background-color: var(--color-secondary);">
-                    <div class="container promo-content scroll-reveal">
+                <!-- Slide 1: Promo Enamorados -->
+                <div class="promo-slide custom-slide slide-enamorados">
+                    <!-- Valentine's Decorations -->
+                    <i class="ph-fill ph-heart decor decor-heart"
+                        style="top: 10%; left: 5%; font-size: 8rem; opacity: 0.5; transform: rotate(-15deg);"></i>
+                    <i class="ph-fill ph-heart decor decor-heart"
+                        style="top: 60%; right: 5%; font-size: 10rem; opacity: 0.6; animation-delay: 1s; transform: rotate(10deg);"></i>
+                    <i class="ph-fill ph-heart decor decor-heart"
+                        style="bottom: 15%; left: 35%; font-size: 4rem; opacity: 0.4; animation-delay: 2s; transform: rotate(-25deg);"></i>
+                    <div class="container promo-content">
                         <div class="promo-text">
-                            <span class="promo-tag">¡Promoción Jurásica!</span>
-                            <h2>Compra 2 Dino-Teas grandes y llévate el tercero totalmente <strong>GRATIS</strong>.</h2>
-                            <p>Solo por tiempo limitado en sucursales seleccionadas.</p>
+                            <span class="promo-tag tag-enamorados">PROMO ENAMORADOS</span>
+                            <h2>2 DINO BEBIDAS + ORDEN DE BONELESS</h2>
+                            <p class="promo-sale">SOLO 14 DE FEBRERO</p>
+                            <p class="promo-price">$209 <span>En Combo</span></p>
+                            <p class="promo-disclaimer">*No aplican bebidas especiales, ni mixed</p>
                         </div>
-                        <a href="#locations" class="btn btn-dark btn-lg">Canjear ahora</a>
+                        <div class="promo-images">
+                            <img src="Imagenes_Menú/Base_Té/Fresa.png" alt="Dino Bebida" class="promo-drink drink-left">
+                            <img src="Imagenes_Menú/Base_leche/Frutos_Rojos.png" alt="Dino Bebida"
+                                class="promo-drink drink-right">
+                        </div>
                     </div>
                 </div>
 
-                <!-- Slide 2 -->
-                <div class="promo-slide" style="background-color: var(--color-primary-light);">
+                <!-- Slide 2: Bebidas de Temporada -->
+                <div class="promo-slide custom-slide slide-temporada">
+                    <!-- Valentine's Decorations -->
+                    <i class="ph-fill ph-heart decor decor-heart"
+                        style="top: -5%; right: 10%; font-size: 15rem; opacity: 0.25; transform: rotate(20deg);"></i>
+                    <i class="ph-fill ph-heart decor decor-heart"
+                        style="bottom: 10%; left: 8%; font-size: 7rem; opacity: 0.5; animation-delay: 1.5s; transform: rotate(-10deg);"></i>
                     <div class="container promo-content">
                         <div class="promo-text">
-                            <span class="promo-tag" style="background-color: var(--color-primary); color: white;">De
-                                Temporada</span>
-                            <h2>Refresca tu día con nuestra <strong>Piña Colada Boba</strong>.</h2>
-                            <p>El sabor tropical perfecto para combatir el calor. ¡Pruébalo antes de que se extinga!</p>
+                            <p class="promo-dates">HASTA EL 28 DE FEBRERO</p>
+                            <h2>BEBIDAS DE TEMPORADA</h2>
+                            <p class="promo-price">$89 <span>C/U</span></p>
                         </div>
-                        <a href="#menu" class="btn btn-primary btn-lg"
-                            onclick="document.querySelector('.tab-btn[data-tab=\'base-leche\']').click()">Ver menú</a>
+                        <div class="promo-images">
+                            <div class="drink-wrapper">
+                                <img src="Imagenes_Menú/Base_Yogurth/yogu_fresa.png" alt="Algodón de Azúcar Yogurt"
+                                    class="promo-drink">
+                                <p class="drink-label">ALGODÓN DE AZÚCAR YOGURT</p>
+                            </div>
+                            <div class="drink-wrapper">
+                                <img src="Imagenes_Menú/Base_Yogurth/yogur_frutos.png" alt="Red Velvet Yogurt"
+                                    class="promo-drink">
+                                <p class="drink-label">RED VELVET YOGURT</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Slide 3 -->
-                <div class="promo-slide" style="background-color: #A3C9E2;">
+                <!-- Slide 3: Temporada Navideña -->
+                <div class="promo-slide custom-slide slide-navidena">
+                    <!-- Christmas Decorations -->
+                    <i class="ph-fill ph-star decor decor-star" style="top: 10%; left: 10%; font-size: 5rem;"></i>
+                    <i class="ph-fill ph-star decor decor-star"
+                        style="top: 15%; right: 25%; font-size: 3rem; animation-delay: 1s;"></i>
+                    <i class="ph-fill ph-star decor decor-star"
+                        style="bottom: 20%; left: 45%; font-size: 4rem; animation-delay: 2s;"></i>
+                    <i class="ph-bold ph-snowflake decor decor-snow" style="top: -5%; left: 20%; font-size: 4rem;"></i>
+                    <i class="ph-bold ph-snowflake decor decor-snow"
+                        style="top: -10%; right: 10%; font-size: 6rem; animation-delay: 2s;"></i>
+                    <i class="ph-bold ph-snowflake decor decor-snow"
+                        style="top: -15%; left: 60%; font-size: 3rem; animation-delay: 4s;"></i>
+                    <i class="ph-fill ph-gift decor"
+                        style="bottom: -20px; right: 2%; font-size: 14rem; color: rgba(255,255,255,0.08); transform: rotate(-15deg);"></i>
                     <div class="container promo-content">
                         <div class="promo-text">
-                            <span class="promo-tag" style="background-color: var(--color-text); color: white;">Dino
-                                Rewards</span>
-                            <h2>Acumula <strong>Dino-Puntos</strong> en cada visita.</h2>
-                            <p>Regístrate en tu sucursal más cercana y obtén toppings gratis, descuentos y grandes
-                                sorpresas en tu cumpleaños.</p>
+                            <h2 class="title-navidena">Temporada Navideña</h2>
+                            <p class="promo-price-navidena">$89</p>
+                            <p class="promo-action">PÍDELAS CALIENTITAS</p>
                         </div>
-                        <a href="#locations" class="btn btn-dark btn-lg">Visítanos hoy</a>
+                        <!-- using placeholders for the 4 drinks -->
+                        <div class="promo-images images-navidena">
+                            <div class="drink-wrapper"><img src="Imagenes_Menú/Base_leche/Matcha.png"
+                                    class="promo-drink">
+                                <p class="drink-label">PONCHE</p>
+                            </div>
+                            <div class="drink-wrapper"><img src="Imagenes_Menú/Base_Yogurth/yogur_frutos.png"
+                                    class="promo-drink">
+                                <p class="drink-label">RED VELVET</p>
+                            </div>
+                            <div class="drink-wrapper"><img src="Imagenes_Menú/Base_leche/Café_vainilla.png"
+                                    class="promo-drink">
+                                <p class="drink-label">GOLDEN MILK</p>
+                            </div>
+                            <div class="drink-wrapper"><img src="Imagenes_Menú/Base_leche/chai.png" class="promo-drink">
+                                <p class="drink-label">ARROZ CON LECHE</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
             </div>
-            <!-- Decorative leaves -->
-            <i class="ph-fill ph-plant leaf-dec leaf-1"></i>
-            <i class="ph-fill ph-plant leaf-dec leaf-2"></i>
         </section>
 
         <!-- Menu Section -->
         <section id="menu" class="menu-section">
-            <div class="container">
+            <!-- Menu specific splatters -->
+            <div class="paint-splatter splatter-1"
+                style="top: 5%; left: -5%; width: 25vw; height: 25vw; transform: rotate(15deg);"></div>
+            <div class="paint-splatter splatter-4"
+                style="top: 30%; right: -2%; width: 20vw; height: 20vw; transform: rotate(-45deg);"></div>
+            <div class="paint-splatter splatter-3"
+                style="top: 55%; left: 10%; width: 15vw; height: 15vw; transform: rotate(120deg);"></div>
+            <div class="paint-splatter splatter-2"
+                style="bottom: 5%; right: 15%; width: 18vw; height: 18vw; transform: rotate(5deg);"></div>
+
+            <div class="container" style="position: relative; z-index: 1;">
                 <div class="section-header scroll-reveal">
                     <h2 class="section-title">Explora el Menú</h2>
                     <p class="section-subtitle">Nuestras bebidas más populares, preparadas al momento con ingredientes
@@ -905,17 +985,22 @@
         <div class="container footer-grid">
             <div class="footer-brand">
                 <a href="#" class="logo footer-logo">
-                    <i class="ph-fill ph-paw-print logo-icon"></i>
-                    <span class="logo-text">Dino <span class="logo-accent">Bubble Tea</span></span>
+                    <img src="Imagenes_Menú/Icono.png" alt="Dino Bubble Tea" class="img-logo">
+                    <span class="logo-text"><span class="logo-dino">Dino</span> <span class="logo-accent">Bubble
+                            Tea</span></span>
                 </a>
                 <p class="footer-desc">
                     Tu dosis diaria de felicidad prehistórica. Ingredientes naturales, sabores explosivos y mucho amor
                     en cada vaso.
                 </p>
                 <div class="social-links">
-                    <a href="#" aria-label="Instagram" class="social-icon"><i class="ph-fill ph-instagram-logo"></i></a>
-                    <a href="#" aria-label="Facebook" class="social-icon"><i class="ph-fill ph-facebook-logo"></i></a>
-                    <a href="#" aria-label="TikTok" class="social-icon"><i class="ph-fill ph-tiktok-logo"></i></a>
+                    <a href="https://www.instagram.com/p/DVCva7CkQzO/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram" class="social-icon"><i class="ph-fill ph-instagram-logo"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100063848543823&locale=es_LA" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook" class="social-icon"><i
+                            class="ph-fill ph-facebook-logo"></i></a>
+                    <a href="https://www.tiktok.com/@dinobubletea?lang=es-419" target="_blank" rel="noopener noreferrer"
+                        aria-label="TikTok" class="social-icon"><i class="ph-fill ph-tiktok-logo"></i></a>
                 </div>
             </div>
 
@@ -961,6 +1046,9 @@
 
     <!-- Main JavaScript -->
     <script src="script.js"></script>
+
+    <!-- Fixed Mascot -->
+    <img src="Imagenes_Menú/dino_mascot.png" alt="Dino Mascot" class="dino-mascot-fixed fade-up visible" />
 </body>
 
 </html>

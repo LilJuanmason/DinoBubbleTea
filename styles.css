@@ -6,20 +6,23 @@ Dino Bubble Tea Lite - Original Stylesheet
 
 :root {
     /* Colors */
-    --color-primary: #EBA8B1;
-    --color-primary-dark: #d88f98;
-    --color-primary-light: #f7d5d9;
-    --color-secondary: #B8D8BA;
-    --color-secondary-dark: #9bc09d;
-    --color-bg: #F8F9FA;
-    --color-text: #1A2020;
-    --color-text-light: #4A5568;
-    --color-footer: #374151;
+    --color-primary: #CAE894;
+    /* Mint Green */
+    --color-primary-dark: #A5C076;
+    --color-primary-light: #E1F8B5;
+    --color-secondary: #AF95E2;
+    /* Lavender */
+    --color-secondary-dark: #8c71cc;
+    --color-bg: #3E0B5E;
+    --color-text: #F9F9F9;
+    --color-text-light: #D1D5DB;
+    --color-footer: #2D0845;
     --color-white: #FFFFFF;
+    --color-dark-green: #224C25;
 
     /* Semantic Colors */
-    --color-teal: #0b7a75;
-    --color-yellow: #fcd581;
+    --color-teal: #CAE894;
+    --color-yellow: #AF95E2;
 
     /* Typography */
     --font-heading: 'Montserrat', sans-serif;
@@ -183,13 +186,15 @@ button {
 
 .btn-primary {
     background-color: var(--color-primary);
-    color: var(--color-white);
-    box-shadow: var(--shadow-pink);
+    color: var(--color-dark-green);
+    border: 2px solid var(--color-primary);
+    font-weight: 800;
+    /* Ensure high contrast */
 }
 
 .btn-primary:hover {
-    background-color: var(--color-primary-dark);
-    box-shadow: 0 15px 25px -5px rgba(235, 168, 177, 0.5);
+    background-color: transparent;
+    color: var(--color-primary);
 }
 
 .btn-outline {
@@ -204,13 +209,15 @@ button {
 }
 
 .btn-dark {
-    background-color: var(--color-text);
+    background-color: var(--color-dark-green);
     color: var(--color-white);
+    border: 2px solid var(--color-dark-green);
 }
 
 .btn-dark:hover {
-    background-color: #000;
-    box-shadow: var(--shadow-md);
+    background-color: transparent;
+    color: var(--color-dark-green);
+    box-shadow: none;
 }
 
 /* =========================================
@@ -222,20 +229,23 @@ button {
     left: 0;
     width: 100%;
     height: var(--nav-height);
-    background-color: rgba(248, 249, 250, 0.85);
+    background-color: rgba(62, 11, 94, 0.85);
+    /* 3E0B5E Deep Purple */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     z-index: 1000;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    /* Update border for dark theme */
     transition: var(--transition-normal);
 }
 
 .header.scrolled {
     height: 70px;
     box-shadow: var(--shadow-sm);
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(45, 8, 69, 0.95);
+    /* 2D0845 slightly darker */
 }
 
 .header-content {
@@ -259,8 +269,48 @@ button {
     font-size: 1.8rem;
 }
 
+.img-logo {
+    height: 2.5rem;
+    width: 2.5rem;
+    /* Fixed width to ensure perfect circle */
+    object-fit: cover;
+    /* Cover instead of contain to fill circle */
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+    /* Nice accent ring */
+}
+
+@font-face {
+    font-family: 'JurassicPark';
+    src: url('JurassicPark-BL48.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logo-dino {
+    font-family: 'JurassicPark', var(--font-heading);
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    line-height: 1;
+    /* Match the line height to the container */
+    position: relative;
+    transform: translateY(12px);
+    /* Use transform for pushing it down without affecting the layout baseline rules */
+    letter-spacing: 2px;
+    color: var(--color-white);
+    /* Base color inside the text */
+    -webkit-text-stroke: 1.5px var(--color-text);
+    /* Creates the border effect */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+    /* Adds a little pop/depth behind the border */
+}
+
 .logo-text {
     letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    /* Stick to center so normal font is centered */
+    gap: 0.3rem;
 }
 
 .logo-accent {
@@ -346,9 +396,17 @@ button {
     font-size: 0.875rem;
     border-radius: var(--radius-full);
     margin-bottom: 1.5rem;
-}
 
-.badge-dot {
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-top: var(--nav-height);
+        background-color: var(--color-bg);
+        position: relative;
+        z-index: 1;
+    }
+
     width: 8px;
     height: 8px;
     background-color: var(--color-primary);
@@ -470,7 +528,7 @@ button {
     border-radius: 50%;
     z-index: 0;
     /* Soft glowing effect */
-    box-shadow: 0 0 100px rgba(184, 216, 186, 0.4);
+    box-shadow: 0 0 100px rgba(175, 149, 226, 0.4);
 }
 
 .hero-image {
@@ -526,17 +584,17 @@ button {
 .flavor-card {
     bottom: 20%;
     left: 0;
-    color: var(--color-teal);
+    color: var(--color-dark-green);
     animation-delay: 1.5s;
 }
 
-/* =========================================
-   Promo Section
-   ========================================= */
 .promo-banner {
     position: relative;
     overflow: hidden;
-    color: var(--color-text);
+    color: var(--color-dark-green);
+    /* High contrast for light slides */
+    position: relative;
+    z-index: 1;
 }
 
 .promo-track {
@@ -552,6 +610,240 @@ button {
     position: relative;
     display: flex;
     align-items: center;
+}
+
+/* Custom HTML Promo Slides styling */
+/* Slide Decorations */
+.decor {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.decor-heart {
+    color: #ffb6c1;
+    /* Soft pink for hearts */
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+    animation: floating 4s ease-in-out infinite alternate;
+}
+
+.decor-snow {
+    color: #ffffff;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    animation: falling 6s linear infinite;
+}
+
+.decor-star {
+    color: #ffd700;
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.6));
+    animation: twinkle 3s ease-in-out infinite alternate;
+}
+
+@keyframes falling {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(80vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes twinkle {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+.custom-slide {
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    /* to contain absolute theme decorations */
+}
+
+.promo-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+    padding: 3rem 0;
+    width: 100%;
+}
+
+.promo-images {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    position: relative;
+}
+
+.promo-drink {
+    height: 400px;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.promo-drink:hover {
+    transform: translateY(-10px);
+}
+
+.drink-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.drink-label {
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 160px;
+}
+
+/* Fallback for text slides if used again */
+/* Promo: Enamorados (Slide 1) */
+.slide-enamorados {
+    background: radial-gradient(circle at center, #ff6b8b 0%, #d81640 100%);
+    color: white;
+}
+
+.tag-enamorados {
+    background-color: var(--color-white);
+    color: #d81640;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-full);
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.slide-enamorados h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.promo-sale {
+    background-color: white;
+    color: #d81640;
+    font-weight: 900;
+    padding: 0.2rem 1rem;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.promo-price {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+    color: white;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.promo-price span {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.promo-disclaimer {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-top: 1rem;
+}
+
+/* Promo: Temporada (Slide 2) */
+.slide-temporada {
+    background: radial-gradient(circle at center, #e0283c 0%, #90040f 100%);
+    color: white;
+}
+
+.promo-dates {
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.slide-temporada h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 1rem;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Promo: Navideña (Slide 3) */
+.slide-navidena {
+    background: radial-gradient(circle at center, #136a3f 0%, #06341d 100%);
+    color: white;
+}
+
+.title-navidena {
+    font-family: 'Georgia', serif;
+    /* Closest to the reference serif */
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.promo-price-navidena {
+    font-family: 'Georgia', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #fcebd2;
+    /* Gold-ish */
+}
+
+.promo-action {
+    border: 2px solid white;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-full);
+    display: inline-block;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+.images-navidena {
+    gap: 0.5rem;
+}
+
+.images-navidena .promo-drink {
+    height: 300px;
 }
 
 .promo-content {
@@ -606,7 +898,66 @@ button {
    ========================================= */
 .menu-section {
     padding: 6rem 0;
-    background-color: var(--color-white);
+    background-color: var(--color-bg);
+    position: relative;
+    overflow: hidden;
+    /* Restore overflow hidden to contain the menu specific splatters */
+}
+
+/* Global Paint Splatters */
+.paint-splatter {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.9;
+    pointer-events: none;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.4));
+}
+
+/* Brighter, more electric green */
+/* New organic splash SVGs inspired by the user reference */
+.splatter-1 {
+    top: 5%;
+    left: 2%;
+    width: 18vw;
+    height: 18vw;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><path fill="%23A8F241" d="M370.5,142.5C401.5,166.5,431.5,191.5,455.5,223C479.5,254.5,497.5,292.5,483,322C468.5,351.5,421.5,372.5,385.5,404.5C349.5,436.5,324.5,479.5,289,484.5C253.5,489.5,207.5,456.5,174,424.5C140.5,392.5,119.5,361.5,88.5,331.5C57.5,301.5,16.5,272.5,4.5,237.5C-7.5,202.5,9.5,161.5,36.5,130C63.5,98.5,100.5,76.5,139,59C177.5,41.5,217.5,28.5,254.5,32.5C291.5,36.5,339.5,118.5,370.5,142.5Z"/></svg>') no-repeat center/contain;
+    transform: rotate(15deg);
+}
+
+.splatter-2 {
+    top: 25%;
+    right: 5%;
+    width: 22vw;
+    height: 22vw;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><path fill="%23A8F241" d="M366.5,160.5C396,183.5,434,198.5,453.5,224.5C473,250.5,474,287.5,451.5,311.5C429,335.5,383,346.5,348.5,373.5C314,400.5,291,443.5,257,458.5C223,473.5,178,460.5,141.5,436.5C105,412.5,77,377.5,58.5,339C40,300.5,31,258.5,38.5,218.5C46,178.5,70,140.5,101.5,113C133,85.5,172,68.5,211.5,59.5C251,50.5,291,49.5,325.5,58.5C360,67.5,337,137.5,366.5,160.5Z"/></svg>') no-repeat center/contain;
+    transform: rotate(-35deg);
+}
+
+.splatter-3 {
+    top: 45%;
+    left: -2%;
+    width: 15vw;
+    height: 15vw;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><path fill="%23A8F241" d="M331,162.5C370,183,418,202,444.5,235.5C471,269,476,317,452.5,347.5C429,378,377,391,338.5,404C300,417,275,430,242.5,435C210,440,170,437,138.5,417.5C107,398,84,362,68.5,325C53,288,45,250,47,213.5C49,177,61,142,84.5,113.5C108,85,143,63,180.5,50C218,37,258,33,292,38.5C326,44,354,103,331,162.5Z"/></svg>') no-repeat center/contain;
+    transform: rotate(60deg);
+}
+
+.splatter-4 {
+    top: 65%;
+    right: -2%;
+    width: 25vw;
+    height: 25vw;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><path fill="%23A8F241" d="M386,111.5C423.5,128.5,471,152,488.5,185.5C506,219,493.5,262.5,466,297C438.5,331.5,396,357,358,382.5C320,408,286.5,433.5,246,441C205.5,448.5,158,438,121,411.5C84,385,57.5,342.5,42.5,299C27.5,255.5,24,211,36.5,171.5C49,132,77.5,97.5,111,74.5C144.5,51.5,183,40,222.5,32C262,24,302.5,19.5,338.5,23.5C374.5,27.5,348.5,94.5,386,111.5Z"/></svg>') no-repeat center/contain;
+    transform: rotate(80deg);
+}
+
+.splatter-5 {
+    top: 85%;
+    left: 15%;
+    width: 14vw;
+    height: 14vw;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><path fill="%23A8F241" d="M382,107C431,135.5,487,175,496,224.5C505,274,467,333.5,413.5,366C360,398.5,291,404,233.5,406C176,408,130,406.5,93.5,379.5C57,352.5,30,300,16.5,246C3,192,3,136.5,24.5,95.5C46,54.5,89,28,135.5,13.5C182,-1,232,0.5,280,7.5C328,14.5,333,78.5,382,107Z"/></svg>') no-repeat center/contain;
+    transform: rotate(180deg);
 }
 
 .menu-tabs {
@@ -622,18 +973,25 @@ button {
     border-radius: var(--radius-full);
     font-weight: 600;
     color: var(--color-text-light);
-    background: transparent;
+    background: rgba(255, 255, 255, 0.05);
+    /* subtle visibility against dark backgrounds */
     transition: var(--transition-normal);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Increased border for glassmorphism */
+    backdrop-filter: blur(8px);
+    /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .tab-btn:hover {
-    color: var(--color-text);
-    background: var(--color-bg);
+    color: var(--color-white);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .tab-btn.active {
-    background-color: var(--color-text);
-    color: var(--color-white);
+    background-color: var(--color-primary);
+    color: var(--color-dark-green);
+    border-color: var(--color-primary);
 }
 
 .menu-grid {
@@ -644,13 +1002,18 @@ button {
 }
 
 .product-card {
-    background: var(--color-white);
+    background: rgba(255, 255, 255, 0.05);
+    /* slightly transparent over dark bg */
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
     transition: var(--transition-bounce);
     overflow: hidden;
     position: relative;
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* light border for dark bg, helps contrast */
+    backdrop-filter: blur(12px);
+    /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .product-card:hover {
@@ -774,7 +1137,10 @@ button {
    ========================================= */
 .locations-section {
     padding: 6rem 0;
-    background-color: var(--color-bg);
+    background-color: transparent;
+    /* Changed from var(--color-bg) to transparent to show global background and splatters */
+    position: relative;
+    z-index: 1;
 }
 
 .sub-badge {
@@ -793,11 +1159,12 @@ button {
 }
 
 .location-card {
-    background: var(--color-white);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: var(--transition-normal);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .location-card:hover {
@@ -884,7 +1251,8 @@ button {
    Footer
    ========================================= */
 .footer {
-    background-color: var(--color-footer);
+    background-color: #2D0845;
+    /* Slightly darker than 3E0B5E for contrast */
     color: var(--color-white);
     padding-top: 5rem;
 }
@@ -1156,4 +1524,20 @@ button {
     .hero-title {
         font-size: 2.2rem;
     }
+}
+
+/* Fixed Mascot */
+.dino-mascot-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 250px;
+    height: auto;
+    z-index: 9999;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.dino-mascot-fixed:hover {
+    transform: scale(1.1) rotate(-5deg);
 }
